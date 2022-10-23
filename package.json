@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "compile": "tsc",
+    "watch": "tsc -w"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "name": "login-compass",
+  "version": "1.0.0",
+  "description": "Procject which authenticate a user ",
+  "main": "app.js",
+  "license": "MIT"
+}

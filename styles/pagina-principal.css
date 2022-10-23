@@ -1,0 +1,143 @@
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  color: #222222;
+}
+.header__container .header__date {
+  text-align: center;
+}
+.header__container .header__date .header__date--hours {
+  font-size: 144px;
+  line-height: 182.52px;
+  font-weight: bold;
+}
+.header__container .header__date .header__date--day {
+  font-size: 14px;
+  line-height: 17.75px;
+}
+.header__container .header__localization--city {
+  font-size: 14px;
+  line-height: 17.75px;
+}
+.header__container .header__localization--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__container .header__localization--container .header__localization--graus {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 60.84px;
+  margin-left: 0.2em;
+}
+
+.main {
+  position: relative;
+  height: 600px;
+}
+.main::before {
+  content: "";
+  background: url(../assets/bola-LogoCompasso\ 1\(1\).png);
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 600px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.container__title {
+  margin-right: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.container__title .container__title--title {
+  color: #C13216;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 81.12px;
+}
+.container__title .container__title--title:not(:first-of-type) {
+  font-size: 64px;
+}
+.container__title .container__title--paragraph {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.footer {
+  background: linear-gradient(#33383D, #1C1D20);
+  color: #fff;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+.footer .footer__refresh {
+  display: flex;
+  margin-left: 10rem;
+  align-items: center;
+}
+.footer .footer__refresh .footer__refresh--about {
+  margin-right: 2rem;
+  font-size: 14px;
+  line-height: 17.75px;
+  width: 25%;
+  direction: rtl;
+}
+.footer .footer__refresh .footer__refresh--container {
+  text-align: center;
+}
+.footer .footer__refresh .footer__refresh--container .footer__refresh--time {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60.84px;
+}
+
+.footer__information {
+  width: 30%;
+  font-size: 12px;
+  direction: rtl;
+  position: relative;
+}
+.footer__information::after {
+  content: "";
+  width: 61px;
+  border: 1px solid #fff;
+  transform: rotate(90deg);
+  position: absolute;
+  right: -8%;
+}
+
+.footer__options {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.footer__options .options__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+.footer__options .footer__otpions--continue {
+  text-decoration: none;
+  text-align: center;
+  color: #C13216;
+  font-size: 12px;
+  line-height: 15.21px;
+  display: block;
+}
+.footer__options .footer__options--leave {
+  font-size: 12px;
+  line-height: 15.21px;
+  font-weight: bold;
+  color: #fff;
+  width: 120px;
+  border: none;
+  display: block;
+  background: none;
+}/*# sourceMappingURL=pagina-principal.css.map */

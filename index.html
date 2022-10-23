@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/login-page.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <section class="information">
+          <h1 class="information__heading">Olá</h1>
+          <p class="information__paragraph">
+            Para continuar navegando de forma segura, efetue o login na rede.
+          </p>
+        </section>
+        <section class="login">
+          <h2 class="form__title">Login</h2>
+          <form id="form" action="" class="form-login">
+            <div class="form__control form__empty form__user">
+              <input
+                class="form__control--user form__control--item"
+                type="text"
+                name="usuario"
+                id="username"
+                placeholder="Usuário"
+              />
+            </div>
+            <div class="form__control form__empty form__password">
+              <input
+                class="form__control--password form__control--item"
+                type="password"
+                name="senha"
+                id="password"
+                placeholder="Senha"
+              />
+            </div>
+            <button
+              id="submitButton"
+              type="submit"
+              class="btn__form margin-top"
+            >
+              Continuar
+            </button>
+          </form>
+        </section>
+      </div>
+      <div class="image">
+        <img
+          src="./assets/Logo-Compasso-Branco-hor 1.svg"
+          alt="Logo Compasso"
+          class="image__logo"
+        />
+      </div>
+    </main>
+    <!-- <p class="form__error" id="error">
+              Ops, usuário ou senha inválidos. Tente novamente!
+        </p> -->
+    <script type="module" src="./app/dist/js/app.js"></script>
+  </body>
+</html>

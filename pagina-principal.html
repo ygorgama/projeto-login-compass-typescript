@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Principal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/pagina-principal.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container">
+        <a href="pagina-principal.html"
+          ><img src="./assets/LogoCompasso 1.svg" alt="Logo Compass"
+        /></a>
+        <div class="header__date">
+          <p class="header__date--hours" id="hour">11:26</p>
+          <p class="header__date--day" id="day">
+            terça-feira, 17 de março de 2020
+          </p>
+        </div>
+        <div class="header__localization">
+          <p class="header__localization--city" id="cidade">Passo Fundo - RS</p>
+          <div class="header__localization--container">
+            <img
+              id="icon"
+              class="header__localization--icon"
+              src="assets/006-cloudy-1 1.svg"
+              alt="Icone tempo"
+            />
+            <p class="header__localization--graus" id="graus">22º</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container__title">
+        <h2 class="container__title--title">Our mission is</h2>
+        <p class="container__title--paragraph">Nossa missão é</p>
+        <h2 class="container__title--title">to transform the world</h2>
+        <p class="container__title--paragraph">transformar o mundo</p>
+        <h2 class="container__title--title">building digital experiences</h2>
+        <p class="container__title--paragraph">
+          construindo experiências digitais
+        </p>
+        <h2 class="container__title--title">that enable our client’s growth</h2>
+        <p class="container__title--paragraph">
+          que permitam o crescimento dos nossos clientes
+        </p>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer__information">
+        Essa janela do navegador é usada para manter sua sessão de autenticação
+        ativa. Deixe-a aberta em segundo plano e abra uma nova janela para
+        continuar a navegar.
+      </p>
+      <div class="footer__refresh">
+        <p class="footer__refresh--about">Application refresh in</p>
+        <div class="footer__refresh--container">
+          <p class="footer__refresh--time" id="seconds">600</p>
+          <p class="footer__refresh--seconds">seconds</p>
+        </div>
+      </div>
+      <div class="footer__options">
+        <div class="options__container">
+          <a href="https://www.uol.com.br/" class="footer__otpions--continue"
+            >Continuar Navegando</a
+          >
+        </div>
+        <button
+          onclick="PaginaPrincipalController.logout()"
+          class="footer__options--leave"
+          id="logout"
+        >
+          Logout
+        </button>
+      </div>
+    </footer>
+  </body>
+</html>
