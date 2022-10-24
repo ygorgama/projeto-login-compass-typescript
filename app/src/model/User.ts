@@ -7,5 +7,7 @@ export class User{
         this.password = password;
     }
 
-
+    get getUsername(){
+        return this.username
+    }
 }

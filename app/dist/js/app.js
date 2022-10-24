@@ -1,4 +1,5 @@
 import { LoginController } from "./controller/LoginController.js";
+import { PaginaPrincipalController } from "./controller/PaginaPrincipalContoller.js";
 const form = document.querySelector("#form");
 const loginController = new LoginController();
 if (form) {
@@ -6,6 +7,14 @@ if (form) {
         loginController.login(event);
     });
 }
-const inputUsername = document.querySelector("#username");
-const inputPassword = document.querySelector("#password");
-loginController.setInputedPasswordInputedUsername();
+console.log(location.pathname);
+if (location.pathname == '/index.html') {
+    loginController.setInputedPasswordInputedUsername();
+}
+const mainPageController = new PaginaPrincipalController();
+const logoutButton = document.querySelector("#logout");
+if (logoutButton) {
+    logoutButton.addEventListener('click', () => {
+        mainPageController.logout();
+    });
+}

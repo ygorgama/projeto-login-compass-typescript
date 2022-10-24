@@ -3,4 +3,7 @@ export class User {
         this.username = username;
         this.password = password;
     }
+    get getUsername() {
+        return this.username;
+    }
 }

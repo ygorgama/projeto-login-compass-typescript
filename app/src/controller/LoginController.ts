@@ -18,20 +18,19 @@ export class LoginController{
         event.preventDefault();
         const isError = this.checkError();
 
-        this.clear()
 
     
         if (isError) {
             
+            this.clear()
             ErrorView.createHtml()            
             return
         }
         
-        this.inputUsername.classList.add('random')
         const user = new User(this.inputUsername.value, this.inputPassword.value);
         localStorage.setItem('UserLogin', JSON.stringify(user))
-        location.href = 'pagina-principal.html'
 
+        location.href = 'pagina-principal.html'
     }
 
     private checkError():boolean{
