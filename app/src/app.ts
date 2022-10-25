@@ -5,14 +5,12 @@ const form = document.querySelector("#form")
 const loginController =  new LoginController();
 
 
-
 if (form) {
     form.addEventListener("submit",  event =>{
         loginController.login(event)
     })
 }
 
-console.log(location.pathname);
 
 if (location.pathname == '/index.html') {
     loginController.setInputedPasswordInputedUsername();
@@ -26,5 +24,11 @@ if (logoutButton) {
     logoutButton.addEventListener('click', () =>{
         mainPageController.logout()
     })
+}
+
+if (location.pathname == '/pagina-principal.html') {
+    mainPageController.timerLogout();
+    mainPageController.dateHandller();
+    mainPageController.apiHandller();
 }
 
