@@ -35,9 +35,11 @@ export class PaginaPrincipalController {
     apiHandller() {
         if (!navigator.geolocation)
             return alert('An erro ocurred');
-        navigator.geolocation.getCurrentPosition(pos => {
-            this.weatherApiCall(pos.coords.latitude, pos.coords.longitude);
-        }, err => {
+        navigator.geolocation.getCurrentPosition((pos) => __awaiter(this, void 0, void 0, function* () {
+            const items = yield this.weatherApiCall(pos.coords.latitude, pos.coords.longitude);
+            const city = yield this.locationApiCall(pos.coords.latitude, pos.coords.longitude);
+            this.paginaPrincipalView.weatherView(items.icon, items.temperatura, city);
+        }), err => {
             console.log(err);
         }, { enableHighAccuracy: true });
     }
@@ -45,8 +47,20 @@ export class PaginaPrincipalController {
         return __awaiter(this, void 0, void 0, function* () {
             const key = 'd7f766b1eeb849a7a59163414221410';
             const response = yield fetch(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${latitude},${longitude}&aqi=no`);
-            const items = yield response.json();
-            this.paginaPrincipalView.weatherView(items.current.condition.icon, items.current.temp_c);
+            const date = yield response.json();
+            const items = {
+                temperatura: date.current.temp_c,
+                icon: date.current.condition.icon
+            };
+            return items;
+        });
+    }
+    locationApiCall(latitude, longitude) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const response = yield fetch(`https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}&zoom=10`);
+            const location = yield response.json();
+            const item = {};
+            return location.address.city;
         });
     }
 }

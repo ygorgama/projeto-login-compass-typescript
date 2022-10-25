@@ -22,4 +22,3 @@ if (location.pathname == '/pagina-principal.html') {
     mainPageController.dateHandller();
     mainPageController.apiHandller();
 }
-console.log(location.pathname);

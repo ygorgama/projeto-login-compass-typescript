@@ -1,15 +1,17 @@
 export class PaginaPrincipalView{
     private seconds: HTMLElement;
-    private day: HTMLElement
-    private hour: HTMLElement
-    private graus: HTMLElement
-    private icon: HTMLImageElement
+    private day: HTMLElement;
+    private hour: HTMLElement;
+    private graus: HTMLElement;
+    private icon: HTMLImageElement;
+    private city: HTMLElement;
     constructor(){
-        this.seconds = document.querySelector('#seconds') as HTMLElement
-        this.day = document.querySelector('#day') as HTMLElement
-        this.hour = document.querySelector('#hour') as HTMLElement
-        this.graus = document.querySelector('#graus') as HTMLElement
-        this.icon = document.querySelector('#icon') as HTMLImageElement
+        this.seconds = document.querySelector('#seconds') as HTMLElement;
+        this.day = document.querySelector('#day') as HTMLElement;
+        this.hour = document.querySelector('#hour') as HTMLElement;
+        this.graus = document.querySelector('#graus') as HTMLElement;
+        this.icon = document.querySelector('#icon') as HTMLImageElement;
+        this.city = document.querySelector('#cidade') as HTMLElement;
         
     }
 
@@ -17,7 +19,7 @@ export class PaginaPrincipalView{
         let timeout: number = 600;
         setInterval(() =>{
             this.seconds.innerHTML = String(timeout)
-            timeout--
+            timeout--;
         }, 1000)
         if (timeout === 0) {
             logout()
@@ -27,19 +29,20 @@ export class PaginaPrincipalView{
     public dayView():void{
         const date: Date = new Date(); 
         const options:object = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        this.day.innerHTML = date.toLocaleDateString('pt-br',options)
+        this.day.innerHTML = date.toLocaleDateString('pt-br',options);
     }
 
     public hourView():void{
         setInterval(() =>{
             const date: Date = new Date(); 
             const options:object = {hour: '2-digit', minute:'2-digit'};
-            this.hour.innerHTML = date.toLocaleTimeString('pt-br',options)
+            this.hour.innerHTML = date.toLocaleTimeString('pt-br',options);
         }, 100)
     }
 
-    public weatherView(src:string, graus:number){
-        this.graus.innerHTML = `${graus}º`
-        this.icon.src = src
+    public weatherView(src:string, graus:number, city:string){
+        this.graus.innerHTML = `${graus}º`;
+        this.icon.src = src;
+        this.city.innerHTML = city
     }
 }

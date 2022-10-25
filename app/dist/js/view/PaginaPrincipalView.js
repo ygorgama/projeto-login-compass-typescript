@@ -5,6 +5,7 @@ export class PaginaPrincipalView {
         this.hour = document.querySelector('#hour');
         this.graus = document.querySelector('#graus');
         this.icon = document.querySelector('#icon');
+        this.city = document.querySelector('#cidade');
     }
     contador(logout) {
         let timeout = 600;
@@ -28,8 +29,9 @@ export class PaginaPrincipalView {
             this.hour.innerHTML = date.toLocaleTimeString('pt-br', options);
         }, 100);
     }
-    weatherView(src, graus) {
+    weatherView(src, graus, city) {
         this.graus.innerHTML = `${graus}º`;
         this.icon.src = src;
+        this.city.innerHTML = city;
     }
 }

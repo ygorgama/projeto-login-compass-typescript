@@ -32,4 +32,3 @@ if (location.pathname == '/pagina-principal.html') {
     mainPageController.apiHandller();
 }
 
-console.log(location.pathname);
