@@ -12,7 +12,7 @@ if (form) {
 }
 
 
-if (location.pathname == '/index.html') {
+if (location.pathname === '/index.html' || location.pathname === '/') {
     loginController.setInputedPasswordInputedUsername();
 }
 
@@ -32,3 +32,4 @@ if (location.pathname == '/pagina-principal.html') {
     mainPageController.apiHandller();
 }
 
+console.log(location.pathname);

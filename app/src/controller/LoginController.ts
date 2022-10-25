@@ -81,11 +81,7 @@ export class LoginController{
 
     private activateStyle():void{
         const formsControl = document.querySelectorAll('.form__control')
-
-
-
-            
-        
+      
         if (typeof this.inputedPassword !== 'undefined' && typeof this.inputedUsername !== 'undefined') {
             if (this.inputedUsername.length > 0 && this.inputedPassword.length > 0 ) {
                     

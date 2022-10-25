@@ -7,7 +7,7 @@ if (form) {
         loginController.login(event);
     });
 }
-if (location.pathname == '/index.html') {
+if (location.pathname === '/index.html' || location.pathname === '/') {
     loginController.setInputedPasswordInputedUsername();
 }
 const mainPageController = new PaginaPrincipalController();
@@ -22,3 +22,4 @@ if (location.pathname == '/pagina-principal.html') {
     mainPageController.dateHandller();
     mainPageController.apiHandller();
 }
+console.log(location.pathname);

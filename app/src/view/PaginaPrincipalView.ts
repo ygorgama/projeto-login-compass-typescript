@@ -39,7 +39,7 @@ export class PaginaPrincipalView{
     }
 
     public weatherView(src:string, graus:number){
-        this.graus.innerHTML = String(graus) 
+        this.graus.innerHTML = `${graus}º`
         this.icon.src = src
     }
 }
