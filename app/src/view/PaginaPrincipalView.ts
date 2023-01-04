@@ -16,14 +16,16 @@ export class PaginaPrincipalView{
     }
 
     public contador(logout:Function):void{
-        let timeout: number = 600;
+        let timeout: number = 10;
         setInterval(() =>{
-            this.seconds.innerHTML = String(timeout)
+            this.seconds.innerHTML = `${timeout}`
+            if (timeout == 0) {
+                logout()
+            }
             timeout--;
         }, 1000)
-        if (timeout === 0) {
-            logout()
-        }
+        console.log(timeout);
+
     }
 
     public dayView():void{

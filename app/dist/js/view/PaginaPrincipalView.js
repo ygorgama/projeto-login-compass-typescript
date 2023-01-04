@@ -8,14 +8,15 @@ export class PaginaPrincipalView {
         this.city = document.querySelector('#cidade');
     }
     contador(logout) {
-        let timeout = 600;
+        let timeout = 10;
         setInterval(() => {
-            this.seconds.innerHTML = String(timeout);
+            this.seconds.innerHTML = `${timeout}`;
+            if (timeout == 0) {
+                logout();
+            }
             timeout--;
         }, 1000);
-        if (timeout === 0) {
-            logout();
-        }
+        console.log(timeout);
     }
     dayView() {
         const date = new Date();
